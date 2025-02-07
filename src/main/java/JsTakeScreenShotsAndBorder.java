@@ -22,7 +22,9 @@ public class JsTakeScreenShotsAndBorder {
         //Enter text in the field
         WebElement btn = driver.findElement((By.name("search")));
         enterText(driver,btn,"HP");
-     //   driver.quit();
+
+        Thread.sleep(2000);
+        driver.quit();
 
 
     }
