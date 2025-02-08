@@ -10,6 +10,12 @@ public class JSDemo {
         driver.get("https://omayo.blogspot.com/");
 
         JavascriptExecutor jse = (JavascriptExecutor)driver;
+        //Zoom in -out
+        jse.executeScript("document.body.style.zoom = '200%';");
+        Thread.sleep(1000);
+        jse.executeScript("document.body.style.zoom = '50%';");
+        Thread.sleep(1000);
+        jse.executeScript("document.body.style.zoom = '100%';");
         //Alert
     //   jse.executeScript("alert('Vik Plakhov')");
         //Prompt
@@ -27,10 +33,11 @@ public class JSDemo {
        // Thread.sleep(3000);
        driver.switchTo().alert().accept();// to close alert
 
-     /*  jse.executeScript("document.getElementById('ta1').value = 'Vikenty Plakhov'");
+      jse.executeScript("document.getElementById('ta1').value = 'Vikenty Plakhov'");
        jse.executeScript("document.getElementById('pah').style.color='blue'");
-        jse.executeScript("document.getElementById('pah').style.background='red'");*/
-
+        jse.executeScript("document.getElementById('pah').style.background='red'");
+       Thread.sleep(3000);
+       driver.quit();
     }
     public static void javaScriptClick(WebDriver driver,WebElement element){
         JavascriptExecutor jse = (JavascriptExecutor)driver;
