@@ -1,0 +1,19 @@
+<EmployeeData>
+    <Employee>
+        <Name>Oleg</Name>
+        <Location>Moscow</Location>
+        <Experience>10</Experience>
+    </Employee>
+    <Employee>
+        <Name>Pavel</Name>
+        <Location>Tashkent</Location>
+        <Experience>15</Experience>
+    </Employee>
+    <Employee>
+        <Name>Viktor</Name>
+        <Location>New York</Location>
+        <Experience>5</Experience>
+    </Employee>
+
+
+</EmployeeData>
