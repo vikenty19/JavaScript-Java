@@ -19,7 +19,9 @@ public class XMLReadingDemo {
 		     
 	    	 System.out.println("Username is "+table.get("Username"));
 	    	 System.out.println("Browser is "+table.get("Browser"));
-	    	 System.out.println("-----");
+			System.out.println("Runmode is   "+ table.get("Runmode"));
+	    	 System.out.println("Passwors is  "+ table.get("passsword"));
+			System.out.println("_________________--");
 		    	 
 		 }
 		
