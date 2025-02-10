@@ -1,3 +1,5 @@
+<SuiteA>
+
 <EmployeeData>
     <Employee>
         <Name>Oleg</Name>
@@ -17,3 +19,4 @@
 
 
 </EmployeeData>
+</SuiteA>

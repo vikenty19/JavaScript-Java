@@ -6,14 +6,14 @@ public class XMLReadingDemo {
     public static void main(String[] args) {
 
         String xmlFilePath = System.getProperty("user.dir")+"\\XMLReaderDemo\\files\\TestData.xml";
-
+        String  xmlFilePath1 = System.getProperty("user.dir")+"\\XML\\xmlFile.xml";
         XMLReader xmlReader = new XMLReader(xmlFilePath);
-
-        List<Hashtable<String, String>> listData = xmlReader.getDataAsList("ForgotPasswordTest");
+     //   List<Hashtable<String, String>> listData = xmlReader.getDataAsList("EmployeeData");
+        List<Hashtable<String, String>> listData = xmlReader.getDataAsList("LoginTest");
 
         System.out.println(listData);
 
-        for(int i=0;i<listData.size();i++) {
+    /*    for(int i=0;i<listData.size();i++) {
 
             Hashtable<String, String> table = listData.get(i);
 
@@ -23,7 +23,7 @@ public class XMLReadingDemo {
             System.out.println("Passwors is  "+ table.get("Passsword"));
             System.out.println("_________________");
 
-        }
+        }*/
 
         System.out.println(listData.get(0).get("Browser"));
 
