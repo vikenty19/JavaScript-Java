@@ -1,4 +1,6 @@
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class Practica {
@@ -22,4 +24,17 @@ public class Practica {
         Practica p = new Practica();
         p.color = "green";
         System.out.println(Practica.wheels);
+
+//create List of HashMap
+        List<HashMap<String,String>> list = new ArrayList<>();
+       HashMap<String,String >map = new HashMap<>();
+       map.put("1","One");
+       map.put("2","Two");
+        HashMap<String,String >map1 = new HashMap<>();
+        map1.put("3","Three");
+        map1.put("4","Four");
+        list.add(map);
+       list.add(map1);
+        System.out.println(list);
+
 }}

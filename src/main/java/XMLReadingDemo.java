@@ -9,7 +9,7 @@ public class XMLReadingDemo {
 
         XMLReader xmlReader = new XMLReader(xmlFilePath);
 
-        List<Hashtable<String, String>> listData = xmlReader.getDataAsList("LoginTest");
+        List<Hashtable<String, String>> listData = xmlReader.getDataAsList("ForgotPasswordTest");
 
         System.out.println(listData);
 
