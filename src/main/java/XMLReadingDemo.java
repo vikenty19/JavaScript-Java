@@ -6,6 +6,7 @@ public class XMLReadingDemo {
     public static void main(String[] args) {
 
         String xmlFilePath = System.getProperty("user.dir")+"\\XMLReaderDemo\\files\\TestData.xml";
+        //My pool of data
         String  xmlFilePath1 = System.getProperty("user.dir")+"\\XML\\xmlFile.xml";
         XMLReader xmlReader = new XMLReader(xmlFilePath);
      //   List<Hashtable<String, String>> listData = xmlReader.getDataAsList("EmployeeData");
