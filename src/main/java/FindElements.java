@@ -19,37 +19,36 @@ public class FindElements {
         driver.manage().window().maximize();
         driver.get(url);
 
-  /*      List<WebElement> options =driver.findElements(By.cssSelector("#multiselect1 option"));
+       List<WebElement> options =driver.findElements(By.cssSelector("#multiselect1 option"));
         for (WebElement e:options) {
             System.out.println(e.getText());
         }
 
-        for (int i = 0;i<options.size();i++){
-            System.out.println(options.get(i).getText());
+       
 
-
-        }*/
-
-        String selector = "[class='widget LinkList'] li";
-        List<WebElement> links = driver.findElements(By.cssSelector(selector ));
-        System.out.println(links.size());
-
-
-        for (int i = 1; i <=links.size()-3 ; i++) {
-            String path = selector+":nth-child("+i+")";
-            System.out.println(path);
-           driver.findElement(By.cssSelector(path)).click();
-            Thread.sleep((2000));
+        String path = "(//div[@id='LinkList1']//a)";
+        List<WebElement> linkS = driver.findElements(By.xpath(path));
+        System.out.println(linkS.size());
+        for (int i=1;i<=linkS.size();i++){
+            String elementPath = path+"["+i+"]";
+            if(i==3){
+              continue;//because 3 link disabled
+            }
+            System.out.println(elementPath);
+            driver.findElement(By.xpath(elementPath)).click();
+            Thread.sleep(1000);
             driver.navigate().back();
+        }
+        List<WebElement> allLinks = driver.findElements(By.tagName("a"));
+        for (WebElement e:allLinks){
+            if(e.getAttribute("href")!=null) {
+                System.out.println(e.getAttribute("href"));
+            }
+        }
+             driver.quit();
 
         }
-
-
-
-        driver.quit();
-
 
     }
 
 
-}

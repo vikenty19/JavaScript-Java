@@ -20,10 +20,11 @@ public class DynamicallyLoading extends Demo{
           driver.findElement((By.linkText("Example 1: Element on page that is hidden"))).click();
           driver.findElement(By.cssSelector("div#start button")).click();
           // Wait while loading Two ways = invisibility of element
-        wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//div[@id = 'loading']/img")));
+      //  wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//div[@id = 'loading']/img")));
         // or visibility next one
-     //  WebElement pageHead=wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@id ='finish']/h4")));
-        WebElement textOnPage = driver.findElement(By.xpath("//div[@id ='finish']/h4"));
+       WebElement textOnPage =wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@id ='finish']/h4")));
+
+     //   WebElement textOnPage = driver.findElement(By.xpath("//div[@id ='finish']/h4"));
        String text =textOnPage.getText();
        System.out.println(text);
 
