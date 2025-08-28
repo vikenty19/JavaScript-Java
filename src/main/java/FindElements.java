@@ -40,15 +40,15 @@ public class FindElements {
             driver.navigate().back();
         }
         List<WebElement> allLinks = driver.findElements(By.tagName("a"));
-        for (WebElement e:allLinks){
-            if(e.getAttribute("href")!=null) {
+        for (WebElement e : allLinks) {
+            if (e.getAttribute("href") != null) {
                 System.out.println(e.getAttribute("href"));
             }
-        }
-             driver.quit();
 
         }
+            driver.quit();
 
     }
+}
 
 

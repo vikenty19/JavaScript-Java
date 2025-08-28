@@ -16,21 +16,20 @@ public class AlertAndWait extends Demo {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
-
-
-        //implicit Wait
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));//Global Wait wait for every element
-
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         driver.get(url);
+
+     /*   //implicit Wait
+    //    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));//Global Wait wait for every element
+
         driver.findElement(By.cssSelector("button.dropbtn")).click();
 
         //Explicit wait
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(50));//Waiting of special element
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));//Waiting of special element
         WebElement gmail = wait.until(ExpectedConditions
                 .visibilityOfElementLocated(By.cssSelector("#myDropdown>a:nth-child(3)")));
-        // gmail.click();
-        // driver.findElement(By.cssSelector("#myDropdown>a:nth-child(3)")).click();
-
+         gmail.click();
+    */
         // Alerts handle
         driver.findElement(By.id("alert1")).click();
         //wait until alert is present
@@ -40,8 +39,8 @@ public class AlertAndWait extends Demo {
         //     driver.switchTo().alert().accept();
         String alertText = alert.getText();
         System.out.println(alertText);
-        alert.accept();//close the alert window
-        //   alert.dismiss();//another wau to close the alert close
+    //    alert.accept();//close the alert window
+           alert.dismiss();//another wau to close the alert close
         WebElement textField = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("ta1")));
         textField.sendKeys("viktor morozov");
         driver.quit();
