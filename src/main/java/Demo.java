@@ -22,6 +22,7 @@ public class Demo {
     static String LoadUrl = "https://the-internet.herokuapp.com/";
 
     static String letCodeUrl = "https://letcode.in/dropdowns";
+    static String jQuery = "https://www.jqueryscript.net/demo/Drop-Down-Combo-Tree/";
     static WebDriver driver;
     static  WebDriverWait wait;
 
