@@ -23,6 +23,7 @@ public class Demo {
 
     static String letCodeUrl = "https://letcode.in/dropdowns";
     static String jQuery = "https://www.jqueryscript.net/demo/Drop-Down-Combo-Tree/";
+    static String autoSuggest = "https://makemytrip.com";
     static WebDriver driver;
     static  WebDriverWait wait;
 
