@@ -18,6 +18,9 @@ public class FindElements {
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get(url);
+        synchronized (driver){//stop on 5 sec - learning purpose
+            driver.wait(5000);
+        }
 
        List<WebElement> options =driver.findElements(By.cssSelector("#multiselect1 option"));
         for (WebElement e:options) {
